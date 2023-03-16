@@ -1,6 +1,4 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +18,21 @@ public class EmployeePayrollDBService {
                 double basic_pay = result.getDouble("basic_pay");
                 employeePayrollList.add(new EmployeeDetails(id, name, department, phone_number, basic_pay));
             }
-            conn.close();
+            conn.close(); 
         } catch (Exception e) {
             e.printStackTrace();
         }
         return employeePayrollList;
+    }
+
+    public int updateEmployeeData(String name, double salary) {
+        String sql= String.format("update employee_payroll set basic_pay = %.2f where name ='%s'",salary,name);
+        try (Connection conn = new DBConnection().getConnection()){
+            Statement statement = conn.createStatement();
+            return statement.executeUpdate(sql);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return 0   ;
     }
 }
