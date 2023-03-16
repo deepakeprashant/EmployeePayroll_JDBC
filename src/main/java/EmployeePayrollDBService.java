@@ -35,4 +35,17 @@ public class EmployeePayrollDBService {
         }
         return 0   ;
     }
+
+    public int updateEmployeeDataUsePreparedStatement(String name, double salary) {
+        String sql = "update employee_payroll set basic_pay = ? where name =?";
+        try (Connection conn = new DBConnection().getConnection()){
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setDouble(1,salary);
+            preparedStatement.setString(2,name);
+            return preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

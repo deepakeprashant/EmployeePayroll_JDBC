@@ -19,4 +19,13 @@ public class EmployeePayrollServiceTest {
         boolean result = employeePayrollService.updateEmployeeSalary("Sakshi",250000.0);
         Assertions.assertEquals(true,result);
     }
+
+    @Test
+    public void givenEmployeePayrollSalaryUpdateMatchesUsingPreparedStatement(){
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        List<EmployeeDetails> employeePayrollList =
+                employeePayrollService.readEmployeeData(EmployeePayrollService.IOService.DB_IO);
+        boolean result = employeePayrollService.updateEmployeeSalaryUsingPreparedStatement("Sakshi",750000.0);
+        Assertions.assertEquals(true,result);
+    }
 }

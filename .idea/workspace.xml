@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="120d5914-df1f-45bf-8788-6c7e1f7f61b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EmployeePayrollDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EmployeePayrollDBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EmployeePayrollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EmployeePayrollService.java" afterDir="false" />
@@ -42,7 +41,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.EmployeePayrollServiceTest.givenEmployeePayrollSalaryUpdateMatches">
+  <component name="RunManager" selected="JUnit.EmployeePayrollServiceTest.givenEmployeePayrollSalaryUpdateMatchesUsingPreparedStatement">
     <configuration name="DBConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DBConnection" />
       <module name="Day24_JDB_EmpPayroll" />
@@ -60,6 +59,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeePayrollServiceTest.givenEmployeePayrollSalaryUpdateMatchesUsingPreparedStatement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Day24_JDB_EmpPayroll" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EmployeePayrollServiceTest" />
+      <option name="METHOD_NAME" value="givenEmployeePayrollSalaryUpdateMatchesUsingPreparedStatement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployeePayrollServiceTest.givenRetrieveEmployeePayrollData_FromDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Day24_JDB_EmpPayroll" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,6 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeePayrollServiceTest.givenEmployeePayrollSalaryUpdateMatchesUsingPreparedStatement" />
         <item itemvalue="JUnit.EmployeePayrollServiceTest.givenEmployeePayrollSalaryUpdateMatches" />
         <item itemvalue="JUnit.EmployeePayrollServiceTest.givenRetrieveEmployeePayrollData_FromDB" />
         <item itemvalue="Application.DBConnection" />

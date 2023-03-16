@@ -1,6 +1,7 @@
 import java.util.List;
 
 public class EmployeePayrollService {
+
     public enum IOService {CONSOLE_IO, FILE_IO , DB_IO}
     public List<EmployeeDetails> employeePayrollList;
 
@@ -20,6 +21,18 @@ public class EmployeePayrollService {
 
     public boolean updateEmployeeSalary(String name, double salary) {
         int result = new EmployeePayrollDBService().updateEmployeeData(name ,salary);
+        if (result == 0){
+            return false;
+        }
+        EmployeeDetails employeeDetails = this.getEmployeeData(name);
+        if (employeeDetails != null){
+            employeeDetails.basic_pay = salary;
+        }
+        displayEmployeeData(employeePayrollList);
+        return true;
+    }
+    public boolean updateEmployeeSalaryUsingPreparedStatement(String name, double salary) {
+        int result = new EmployeePayrollDBService().updateEmployeeDataUsePreparedStatement(name ,salary);
         if (result == 0){
             return false;
         }
