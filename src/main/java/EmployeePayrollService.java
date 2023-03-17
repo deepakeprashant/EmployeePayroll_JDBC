@@ -50,4 +50,12 @@ public class EmployeePayrollService {
                 .findFirst()
                 .orElse(null);
     }
+
+    public List<EmployeeDetails> readEmployeeParticularDataRage(IOService dbIo, double salary) {
+        if (dbIo.equals(IOService.DB_IO)){
+            this.employeePayrollList = new EmployeePayrollDBService().readDataRange(salary);
+        }
+        displayEmployeeData(employeePayrollList );
+        return employeePayrollList;
+    }
 }

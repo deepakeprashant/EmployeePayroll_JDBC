@@ -28,4 +28,13 @@ public class EmployeePayrollServiceTest {
         boolean result = employeePayrollService.updateEmployeeSalaryUsingPreparedStatement("Sakshi",750000.0);
         Assertions.assertEquals(true,result);
     }
+
+
+    @Test
+    public void givenRetrieveAllEmployee_ParticularDataRange(){
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        List<EmployeeDetails> employeeDetailsList =
+                 employeePayrollService.readEmployeeParticularDataRage(EmployeePayrollService.IOService.DB_IO,70000.0);
+        Assertions.assertEquals(8,employeeDetailsList.size());
+    }
 }
